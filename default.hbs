@@ -53,6 +53,19 @@
     
     {{> "components/navigation" navigationLayout=@custom.navigation_layout}}
 
+    <!-- DNV MOD BEGIN -->	
+	{{#if @member.paid}}
+{{else}}<div class="gremlin gh-canvas">
+<a rel="sponsored" href="https://www.awin1.com/cread.php?s=3248781&v=36614&q=448538&r=371125">
+    <img src="https://www.awin1.com/cshow.php?s=3248781&v=36614&q=448538&r=371125" border="0">
+</a>
+<center><small>Liever geen advertenties en wel horrornieuws steunen? <u><a href="https://denachtvlinders.nl/dnv375">Upgrade hier</a></u>!</small></center>
+
+</div>
+
+{{/if}}
+<!-- DNV MOD END -->	
+    
     {{{body}}}
     
     {{> "components/footer"}}
