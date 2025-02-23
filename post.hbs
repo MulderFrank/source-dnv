@@ -34,9 +34,9 @@
                     <h4 class="gh-article-author-name">{{authors}}</h4>
                     <div class="gh-article-meta-content">
                         <time class="gh-article-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time>
-                        {{#if reading_time}}
+                        {{!--{{#if reading_time}}
                             <span class="gh-article-meta-length"><span class="bull">—</span> {{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</span>
-                        {{/if}}
+                        {{/if}}--}}
                     </div>
                 </div>
             </div>
@@ -47,9 +47,42 @@
         </header>
 
         <section class="gh-content gh-canvas is-body{{#if @custom.enable_drop_caps_on_posts}} drop-cap{{/if}}">
-            {{content}}
-        </section>
 
+<!-- DNV MOD BEGIN -->		
+		{{#if @member.paid}}{{else}}
+			<div class="kg-card kg-callout-card kg-callout-card-yellow"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text">Steun <b><strong style="white-space: pre-wrap;">De Nachtvlinders</strong></b> en help ons onafhankelijk te blijven! Als betalend lid ontvang je exclusief de handgemaakte <b><strong style="white-space: pre-wrap;">wekelijkse horrorgids met alle horrorreleases</strong></b> per mail en geniet je van een advertentievrije website. <b><strong style="white-space: pre-wrap;">Benieuwd naar de gids?</strong></b> Lees de <a href="https://denachtvlinders.nl/horrorgids-week-6-2025/">editie van week 6</a> terug. Probeer het nu voor slechts <a href="https://denachtvlinders.nl/dnv375" rel="noreferrer"><b><strong style="white-space: pre-wrap;">€3,75 per maand</strong></b></a> en draag bij aan het voortbestaan van jouw favoriete horrorplatform!</div></div>
+		{{/if}}
+<!-- DNV MOD END -->
+            
+            {{content}}
+
+<!-- DNV MOD BEGIN -->
+			{{#if tags}}
+			<span class="gh-article-tag">{{tags separator=", " prefix="Meer over: "}}</span>
+			{{/if}}
+<!-- DNV MOD END -->
+            
+        </section>   
+
+<!-- DNV MOD BEGIN -->
+{{#if @member.paid}}
+ {{else}}
+<div class="gremlin gh-canvas">
+
+<!-- START ADVERTISER: Ziggo NL from awin.com -->
+
+<center><a rel="sponsored" href="https://www.awin1.com/cread.php?s=3689449&v=8275&q=478172&r=371125">
+    <img src="https://www.awin1.com/cshow.php?s=3689449&v=8275&q=478172&r=371125" border="0">
+</a></center>
+
+<!-- END ADVERTISER: Ziggo NL from awin.com -->
+<center><small>Geen advertenties en wel horrornieuws steunen? <u><a href="https://denachtvlinders.nl/dnv375">Upgrade hier</a></u>!</small></center>
+</div>
+
+{{/if}}
+<!-- DNV MOD END -->
+
+        
     </article>
 
     {{#if comments}}
