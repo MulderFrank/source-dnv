@@ -7,6 +7,60 @@
     {{> "components/featured" showFeatured=@custom.show_featured_posts limit=4}}
 {{/match}}
 
+<!-- DNV MOD BEGIN -->
+ {{#if @member.paid}}
+{{else}}<div class="gremlin gh-canvas"><a rel="sponsored" href="https://partner.bol.com/click/click?p=2&t=url&s=3770&f=TXL&url=https%3A%2F%2Fwww.bol.com%2Fnl%2Fnl%2Fl%2Ffilms%2F3133%2F30290%2F&name=dnvbanner">
+    <img src="https://denachtvlinders.nl/content/images/bol-banner-horror.gif" border="0" width="100%">
+</a>
+<center><small>Liever geen advertenties en wel horrornieuws steunen? <u><a href="https://denachtvlinders.nl/dnv375">Upgrade hier</a></u>!</small></center></div>
+{{/if}}
+
+<!-- DNV MOD END -->
+
+    
 {{> "components/cta"}}
 
 {{> "components/post-list" feed="home" postFeedStyle=@custom.post_feed_style showTitle=true showSidebar=@custom.show_publication_info_sidebar}}
+
+<!-- DNV MOD BEGIN -->
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "NewsMediaOrganization",
+    "name": "De Nachtvlinders",
+    "description": "De Nachtvlinders is een online horrormagazine met dagelijks nieuws en recensies over het horrorgenre.",
+    "url": "https://denachtvlinders.nl/",
+		"address": {
+			"@type": "PostalAddress",
+			"addressLocality": "Amsterdam, The Netherlands",
+    	"postalCode": "1052 AV",
+    	"streetAddress": "De Wittenstraat 18a"
+		},
+    "logo": "https://denachtvlinders.nl/wp-content/uploads/2017/11/vlinder.png",
+    "email": "frank@denachtvlinders.nl",
+    "founder": {
+				"@type": "Person",
+        "name": "Frank Mulder",
+        "gender": "Male",
+        "jobTitle": "Editor-in-Chief",
+        "image": "https://frankmulder.media/wp-content/uploads/2019/02/frank-mulder.jpg",
+        "sameAs": [
+                        "https://denachtvlinders.nl/author/frank/",
+												"https://www.linkedin.com/in/frankmuldermedia/",
+												"https://frankmulder.media/",
+												"https://twitter.com/mulderfrank"
+        ]      
+    },
+    "foundingDate": "2009-11-28",
+    "sameAs" : [
+        "https://nl.wikipedia.org/wiki/De_Nachtvlinders",
+		"https://www.linkedin.com/company/denachtvlinders/",
+        "https://facebook.com/denachtvlinders",
+        "https://instagram.com/denachtvlinders",
+        "https://twitter.com/denachtvlinders",
+		"https://bsky.app/profile/denachtvlinders.bsky.social",
+        "https://www.youtube.com/user/deNachtvlinders"
+    ]
+    }
+</script>
+<!-- DNV MOD END -->
